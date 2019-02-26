@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
+require('dotenv').config();
 const bodyParser = require("body-parser");
 const clientRoutes = require("./routes/client");
 const adminRoutes = require("./routes/admin");
