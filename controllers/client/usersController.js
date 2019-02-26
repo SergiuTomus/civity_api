@@ -10,11 +10,11 @@ exports.registerUser = (req, res, next) => {
     })
         .then(user => {
             if (user) {
-                return res.status(422).json({ message: "Email exists" });
+                return res.status(422).json({ message: "Email already exists" });
             } else {
                 bcrypt.hash(req.body.password, 10, (err, hash) => {    // 10 - nr of salting rounds
                     if (err) {
-                        return res.status(500).json({ error: err });
+                        return res.status(500).json({ message: "Not a valid password", error: err });
                     } else {
                         User.create({
                             first_name: req.body.first_name,
@@ -29,7 +29,10 @@ exports.registerUser = (req, res, next) => {
                                 })
                             })
                             .catch(err => {
-                                console.log("error: ", err);
+                                console.log("error: ", err.errors[0].message);
+                                if (err.errors[0].message == "Validation isEmail on email failed") {
+                                    return res.status(500).json({ error: "Not a valid email address" });
+                                }
                                 res.status(500).json({ error: err });
                             });
                     }
