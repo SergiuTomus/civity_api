@@ -4,7 +4,7 @@ const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const clientRoutes = require("./routes/client");
-// const sequelize = require('./api/config/database');
+const adminRoutes = require("./routes/admin");
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 
 // middleware for defined routes
 app.use("/client", clientRoutes);
-// app.use("/admin", adminRoutes);
+app.use("/admin", adminRoutes);
 
 // middleware for requests that does not matched with the defined routes
 app.use((req, res, next) => {
@@ -45,10 +45,5 @@ app.use((error, req, res, next) => {
     });
 });
 
-// creates tables in database for defined models
-// sequelize
-//     .sync({ force: true })
-//     .then(result => { console.log('RASPUNS:>>>>>>>>', result) })
-//     .catch(err => { console.log('ERROR:>>>>>>>>', err) });
 
 module.exports = app;

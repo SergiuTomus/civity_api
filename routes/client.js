@@ -4,8 +4,10 @@ const productsController = require('../controllers/client/productsController');
 const restaurantsController = require('../controllers/client/restaurantsController');
 const usersController = require('../controllers/client/usersController');
 
+//////// CLIENT ROUTES ////////
 
 router.get('/products', productsController.getAllProducts);
+
 // router.get('/products/:productId', productsController.getProduct);
 
 router.get('/restaurants', restaurantsController.getAllRestaurants);

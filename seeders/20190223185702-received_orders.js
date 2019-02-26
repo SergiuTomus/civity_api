@@ -2,17 +2,17 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-      return queryInterface.bulkInsert('received_orders', [{
-        operator_id: 1,
-        full_order_id: 1,
-        created_at: new Date(),
-        updated_at: new Date()
-      },{
-        operator_id: 2,
-        full_order_id: 2,
-        created_at: new Date(),
-        updated_at: new Date()
-      }]);
+    return queryInterface.bulkInsert('received_orders', [{
+      operator_id: 1,
+      full_order_id: 1,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }, {
+      operator_id: 2,
+      full_order_id: 2,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }]);
   },
 
   down: (queryInterface, Sequelize) => {
