@@ -4,6 +4,7 @@ const app = express();
 const morgan = require("morgan");
 require('dotenv').config();
 const bodyParser = require("body-parser");
+const passport = require('passport');
 const clientRoutes = require("./routes/client");
 const adminRoutes = require("./routes/admin");
 
@@ -25,18 +26,22 @@ app.use((req, res, next) => {
     next();
 });
 
-// middleware for defined routes
+// Passport middleware
+app.use(passport.initialize());
+require('./config/passport')(passport);
+
+// Middleware for defined routes
 app.use("/client", clientRoutes);
 app.use("/admin", adminRoutes);
 
-// middleware for requests that does not matched with the defined routes
+// Middleware for requests that does not matched with the defined routes
 app.use((req, res, next) => {
-    const error = new Error("Resource not found");
+    const error = new Error("Resursa nu a fost gasita");
     error.status = 404;
     next(error);
 });
 
-// middleware for all errors in the app
+// Middleware for all errors in the app
 app.use((error, req, res, next) => {
     res.status(error.status || 500);
     res.json({
