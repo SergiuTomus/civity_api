@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../../models').User;
 const validateRegister = require('../../validations/register');
+const validateLogin = require('../../validations/login');
 
 
 // @route   POST client/register
@@ -37,7 +38,7 @@ exports.registerUser = (req, res, next) => {
                             .catch(err => {
                                 console.log("error: ", err.errors[0].message);
                                 if (err.errors[0].message == "Validation isEmail on email failed") {
-                                    return res.status(500).json({ error: "Formatul adresei de email este invalid" });
+                                    return res.status(500).json({ message: "Formatul adresei de email este invalid" });
                                 }
                                 res.status(500).json({ error: err });
                             });
@@ -54,13 +55,18 @@ exports.registerUser = (req, res, next) => {
 // @route   POST client/login
 // @access  Public
 exports.loginUser = (req, res, next) => {
+    const { errors, isValid } = validateLogin(req.body);
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
+
     User.findOne({
         where: { email: req.body.email }
     })
         .then(user => {
             if (!user) {
                 return res.status(401).json({
-                    message: 'Utilizatorul nu a fost gasit'
+                    message: 'Email sau parola incorecta'
                 });
             }
 
@@ -85,7 +91,7 @@ exports.loginUser = (req, res, next) => {
                         }
                     );
                 } else {
-                    res.status(401).json({ message: 'Parola este incorecta' });
+                    res.status(401).json({ message: 'Email sau parola incorecta' });
                 }
             })
         })

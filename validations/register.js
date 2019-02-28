@@ -4,14 +4,33 @@ const isEmpty = require('./isEmpty');
 const validateRegister = (data) => {
     let errors = {};
     data.name = !isEmpty(data.name) ? data.name : '';
-    console.log(data.name);
+    data.email = !isEmpty(data.email) ? data.email : '';
+    data.password = !isEmpty(data.password) ? data.password : '';
+    data.password2 = !isEmpty(data.password2) ? data.password2 : '';
 
     if (!Validator.isLength(data.name, { min: 2, max: 30 })) {
         errors.name = "Numele trebuie sa aiba intre 2 si 30 de caractere"
     }
     if (Validator.isEmpty(data.name)) {
-        errors.name = "Camp obligatoriu";
+        errors.name = "Campul nume trebuie completat";
     }
+    if (Validator.isEmpty(data.email)) {
+        errors.email = "Campul email trebuie completat";
+    }
+    if (!Validator.isLength(data.password, { min: 6, max: 40 })) {
+        errors.password = 'Parola trebuie sa aiba minim 6 caractere';
+    }
+    if (Validator.isEmpty(data.password)) {
+        errors.password = 'Campul parola trebuie completat';
+    }
+    if (Validator.isEmpty(data.password2)) {
+        errors.password2 = 'Campul confirmare parola trebuie completat';
+    } else {
+        if (!Validator.equals(data.password, data.password2)) {
+            errors.password2 = 'Parolele nu se potrivesc';
+        }
+    }
+
 
     return {
         errors: errors,
