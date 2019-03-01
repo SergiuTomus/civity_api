@@ -1,17 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
-const productsController = require('../controllers/client/productsController');
 const restaurantsController = require('../controllers/client/restaurantsController');
 const usersController = require('../controllers/client/usersController');
 
 //////// CLIENT ROUTES ////////
 
-router.get('/products', productsController.getAllProducts);
-
-// router.get('/products/:productId', productsController.getProduct);
-
 router.get('/restaurants', restaurantsController.getAllRestaurants);
+router.get('/restaurants/:restaurantId', restaurantsController.getRestaurantProducts);
 
 router.post('/register', usersController.registerUser);
 router.post('/login', usersController.loginUser);
