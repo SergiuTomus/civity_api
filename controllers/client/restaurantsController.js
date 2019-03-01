@@ -9,12 +9,9 @@ exports.getAllRestaurants = (req, res, next) => {
     const hour = today.getHours();
 
     let program = 'week_program';
-    if (day == 6) {
-        program = "saturday_program";
-    }
-    if (day == 7) {
-        program = "sunday_program";
-    }
+    if (day == 6) program = "saturday_program";
+    if (day == 7) program = "sunday_program";
+
     Restaurant.findAll({
         attributes: ['id', 'name', 'description', 'image_url', 'minimum_order', 'cost_delivery', program]
     })
@@ -52,12 +49,9 @@ exports.getRestaurantProducts = (req, res, next) => {
     const today = new Date();
     let day = today.getDay();
     let program = 'week_program';
-    if (day == 6) {
-        program = "saturday_program";
-    }
-    if (day == 7) {
-        program = "sunday_program";
-    }
+    if (day == 6) program = "saturday_program";
+    if (day == 7) program = "sunday_program";
+
     Restaurant.findByPk(
         req.params.restaurantId,
         {
