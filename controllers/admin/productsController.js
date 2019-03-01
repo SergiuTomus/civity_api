@@ -6,8 +6,7 @@ exports.getAllProducts = (req, res, next) => {
     Product.findAll({
         attributes: { exclude: ['createdAt', 'updatedAt'] },
         where: {
-            restaurant_id: req.body.restaurant_id,
-            category: req.body.category
+            restaurant_id: req.body.restaurant_id
         }
     })
         .then((rows) => {
@@ -24,7 +23,7 @@ exports.getAllProducts = (req, res, next) => {
                     }
                 })
             };
-            res.status(200).json(rows);
+            res.status(200).json(response);
         })
         .catch(err => {
             console.log(err);

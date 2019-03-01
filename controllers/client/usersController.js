@@ -82,7 +82,7 @@ exports.loginUser = (req, res, next) => {
                     jwt.sign(
                         payload,
                         process.env.SECRET_KEY,
-                        { expiresIn: "1h" },
+                        { expiresIn: "1d" },
                         (err, token) => {
                             return res.status(200).json({
                                 message: "Autentificare cu succes",
@@ -105,6 +105,7 @@ exports.loginUser = (req, res, next) => {
 // @detail  Return current user
 // @access  Private
 exports.getCurrentUser = (req, res, next) => {
+    console.log(req.body, req.user.email);
     res.status(200).json({
         id: req.user.id,
         user_name: req.user.name,
