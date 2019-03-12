@@ -2,32 +2,29 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('operators', [{
+    return queryInterface.bulkInsert('restaurant_users', [{
       restaurant_id: 1,
-      first_name: 'Cristina',
-      last_name: 'Popescu',
+      name: 'Cristina Popescu',
       phone: '07286492',
-      user_name: 'cristina.popescu',
+      email: 'cristina.popescu@gmail.com',
       password: '1234',
       status: 'operator',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       restaurant_id: 1,
-      first_name: 'Izabela',
-      last_name: 'Dragomir',
+      name: 'Izabela Dragomir',
       phone: '07286492',
-      user_name: 'izabela.dragomir',
+      email: 'izabela.dragomir@gmail.com',
       password: '1234',
       status: 'operator',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       restaurant_id: 1,
-      first_name: 'Amalia',
-      last_name: 'Romcea',
+      name: 'Amalia Romcea',
       phone: '07286492',
-      user_name: 'amalia.romcea@gmail.com',
+      email: 'amalia.romcea@gmail.com',
       password: '1234',
       status: 'admin',
       createdAt: new Date(),
@@ -42,7 +39,7 @@ module.exports = {
       Return a promise to correctly handle asynchronicity.
 
       Example:
-      return queryInterface.bulkDelete('operators', null, {});
+      return queryInterface.bulkDelete('restaurant_users', null, {});
     */
   }
 };

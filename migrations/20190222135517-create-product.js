@@ -32,8 +32,8 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true,
       },
-      category: {
-        type: Sequelize.STRING,
+      category_id: {
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       createdAt: {

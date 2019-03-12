@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      single_order_id: {
+      order_id: {
         type: Sequelize.INTEGER,
         allowNull: false
       },

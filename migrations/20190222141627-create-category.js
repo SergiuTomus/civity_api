@@ -1,27 +1,19 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('single_orders', {
+    return queryInterface.createTable('categories', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      full_order_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      user_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      client_name: {
+      name: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      total_price: {
-        type: Sequelize.DOUBLE,
+      restaurant_id: {
+        type: Sequelize.INTEGER,
         allowNull: false
       },
       createdAt: {
@@ -35,6 +27,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('single_orders');
+    return queryInterface.dropTable('categories');
   }
 };

@@ -2,59 +2,67 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('single_orders', [{
-      full_order_id: 1,
+    return queryInterface.bulkInsert('orders', [{
       user_id: 1,
-      client_name: 'Sergiu Tomus',
+      restaurant_id: 1,
+      restaurant_user_id: 3,
+      status: 'preluata',
       total_price: 17.00,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      full_order_id: 1,
       user_id: 1,
-      client_name: 'Tudor Maier',
+      restaurant_id: 1,
+      restaurant_user_id: 1,
+      status: 'preluata',
       total_price: 23.00,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      full_order_id: 1,
       user_id: 1,
-      client_name: 'Serban Stanciu',
+      restaurant_id: 2,
+      restaurant_user_id: 3,
+      status: 'livrata',
       total_price: 21.00,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      full_order_id: 1,
       user_id: 1,
-      client_name: 'Ioana Similie',
+      restaurant_id: 2,
+      restaurant_user_id: 1,
+      status: 'livrata',
       total_price: 28.00,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      full_order_id: 2,
       user_id: 2,
-      client_name: 'Ana Bogdan',
+      restaurant_id: 4,
+      restaurant_user_id: 2,
+      status: 'preluata',
       total_price: 32.00,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      full_order_id: 2,
       user_id: 2,
-      client_name: 'Sebastian Stan',
+      restaurant_id: 5,
+      restaurant_user_id: null,
+      status: 'in asteptare',
       total_price: 29.20,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      full_order_id: 2,
       user_id: 2,
-      client_name: 'Elena Alb',
+      restaurant_id: 5,
+      restaurant_user_id: 2,
+      status: 'respinsa',
       total_price: 51.40,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      full_order_id: 3,
       user_id: 3,
-      client_name: 'Sebastian Dobrincu',
+      restaurant_id: 3,
+      restaurant_user_id: null,
+      status: 'in asteptare',
       total_price: 70.50,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -68,7 +76,7 @@ module.exports = {
       Return a promise to correctly handle asynchronicity.
 
       Example:
-      return queryInterface.bulkDelete('single_orders', null, {});
+      return queryInterface.bulkDelete('orders', null, {});
     */
   }
 };
