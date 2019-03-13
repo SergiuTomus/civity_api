@@ -4,9 +4,9 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('restaurant_users', [{
       restaurant_id: 1,
-      name: 'Cristina Popescu',
+      name: 'Stefan Mandachi',
       phone: '07286492',
-      email: 'cristina.popescu@gmail.com',
+      email: 'stefan.mandachi@yahoo.com',
       password: '1234',
       status: 'operator',
       createdAt: new Date(),

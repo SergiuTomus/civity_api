@@ -19,7 +19,7 @@ exports.getAllProducts = (req, res, next) => {
                         stock: row.stock,
                         description: row.description,
                         image_url: row.image_url,
-                        category: row.category
+                        category_id: row.category_id
                     }
                 })
             };
@@ -38,7 +38,7 @@ exports.createProduct = (req, res, next) => {
         restaurant_id: req.body.restaurant_id,
         name: req.body.name,
         price: req.body.price,
-        category: req.body.category
+        category_id: req.body.category_id
     })
         .then(result => {
             res.status(201).json({
@@ -47,7 +47,7 @@ exports.createProduct = (req, res, next) => {
                     id: result.id,
                     name: result.name,
                     price: result.price,
-                    category: result.category
+                    category_id: result.category_id
                 }
             });
         })
