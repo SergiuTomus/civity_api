@@ -5,27 +5,27 @@ module.exports = {
     return queryInterface.bulkInsert('restaurant_users', [{
       restaurant_id: 1,
       name: 'Stefan Mandachi',
-      phone: '07286492',
+      phone: '0728649258',
       email: 'stefan.mandachi@yahoo.com',
-      password: '1234',
+      password: '$2b$10$ZzQGR3reDntFLFSIAm1P/Ot1wJGzZ20cfyVrEb4Zvl2VM1.CalF8O', // 123456
       status: 'operator',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      restaurant_id: 1,
-      name: 'Izabela Dragomir',
-      phone: '07286492',
-      email: 'izabela.dragomir@gmail.com',
-      password: '1234',
-      status: 'operator',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
+      restaurant_id: 2,
       name: 'Amalia Romcea',
-      phone: '07286492',
+      phone: '0728649258',
       email: 'amalia.romcea@gmail.com',
-      password: '1234',
+      password: '$2b$10$N8l.YQsurocwJM2zVwHAROj/HS9Da6OItCyYo46XIhTO0NvQXB1b2', // 123456
+      status: 'operator',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }, {
+      restaurant_id: 2,
+      name: 'Sergiu Tomus',
+      phone: '0728649258',
+      email: 'sergiutomus@yahoo.com',
+      password: '$2b$10$CmIXpHCQZPNRlAloCKM1TuD6pt9Bhfum8FRV1N.rjK.NYHT4F8AKi', // 123456
       status: 'admin',
       createdAt: new Date(),
       updatedAt: new Date()

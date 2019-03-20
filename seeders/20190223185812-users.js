@@ -10,8 +10,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: 'Amalia Romcea',
-      email: 'amalia.romcea@yahoo.com',
+      name: 'Ana Bogdan',
+      email: 'ana.bogdan@gmail.com',
       password: '$2b$10$N8l.YQsurocwJM2zVwHAROj/HS9Da6OItCyYo46XIhTO0NvQXB1b2', // 123456
       phone: '0728649258',
       createdAt: new Date(),

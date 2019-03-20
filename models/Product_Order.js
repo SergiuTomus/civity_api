@@ -1,13 +1,13 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const ProductOrder = sequelize.define('ProductOrder', {
+  const Product_Order = sequelize.define('Product_Order', {
     product_id: DataTypes.INTEGER,
     order_id: DataTypes.INTEGER,
     quantity: DataTypes.INTEGER,
     single_price: DataTypes.DOUBLE
   }, {});
-  ProductOrder.associate = function(models) {
+  Product_Order.associate = function(models) {
     // associations can be defined here
   };
-  return ProductOrder;
+  return Product_Order;
 };
