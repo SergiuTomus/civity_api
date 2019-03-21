@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const Restaurant_User = require('../../models').Restaurant_User;
-// const Restaurant = require('../../models').Restaurant;
+const Restaurant = require('../../models').Restaurant;
 const validateLogin = require('../../validations/login');
 
 // @route   POST admin/login
@@ -53,9 +53,38 @@ exports.loginUser = (req, res, next) => {
     });
 };
 
-// @route   GET admin/user/:userId
+// @route   GET admin/user
 // @detail  Return restaurant user
 // @access  Private
 exports.getRestaurantUser = (req, res, next) => {
-  
+  Restaurant_User.findByPk(
+    req.user.id,     // from passport middleware
+    {
+      attributes: ['status', 'phone', 'restaurant_id']
+    }
+  )
+    .then(user => {
+      Restaurant.findByPk(
+        user.restaurant_id,
+        {
+          attributes: { exclude: ['createdAt', 'updatedAt'] }
+        }
+      )
+        .then((restaurant) => {
+          res.status(200).json({
+            user: { user_status: user.status, user_phone: user.phone },
+            restaurant: restaurant
+          });
+        })
+        .catch(err => {
+          console.log(err);
+          res.status(500).json({ error: err });
+        });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: err });
+    });
+
+
 };
