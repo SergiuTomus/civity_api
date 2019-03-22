@@ -4,6 +4,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('orders', [{
       user_id: 1,
+      delivery_address: "str. Republicii, nr. 17",
       restaurant_id: 1,
       restaurant_user_id: 3,
       status: 'preluata',
@@ -12,6 +13,7 @@ module.exports = {
       updatedAt: new Date()
     }, {
       user_id: 1,
+      delivery_address: "str. Republicii, nr. 17",
       restaurant_id: 1,
       restaurant_user_id: 1,
       status: 'preluata',
@@ -20,6 +22,7 @@ module.exports = {
       updatedAt: new Date()
     }, {
       user_id: 1,
+      delivery_address: "str. Republicii, nr. 17",
       restaurant_id: 2,
       restaurant_user_id: 3,
       status: 'livrata',
@@ -28,6 +31,7 @@ module.exports = {
       updatedAt: new Date()
     }, {
       user_id: 1,
+      delivery_address: "str. Altman, nr. 26",
       restaurant_id: 2,
       restaurant_user_id: 1,
       status: 'livrata',
@@ -35,7 +39,8 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      user_id: 2,
+      user_id: 1,
+      delivery_address: "str. Altman, nr. 26",
       restaurant_id: 4,
       restaurant_user_id: 2,
       status: 'preluata',
@@ -44,6 +49,7 @@ module.exports = {
       updatedAt: new Date()
     }, {
       user_id: 2,
+      delivery_address: "str. Baladei, nr. 53",
       restaurant_id: 5,
       restaurant_user_id: null,
       status: 'in asteptare',
@@ -52,6 +58,7 @@ module.exports = {
       updatedAt: new Date()
     }, {
       user_id: 2,
+      delivery_address: "str. Baladei, nr. 53",
       restaurant_id: 5,
       restaurant_user_id: 2,
       status: 'respinsa',
@@ -60,6 +67,7 @@ module.exports = {
       updatedAt: new Date()
     }, {
       user_id: 3,
+      delivery_address: "str. Menker, nr. 35",
       restaurant_id: 3,
       restaurant_user_id: null,
       status: 'in asteptare',

@@ -12,6 +12,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
+      delivery_address: {
+        type: Sequelize.TEXT,
+        allowNull: false
+      },
       restaurant_id: {
         type: Sequelize.INTEGER,
         allowNull: false

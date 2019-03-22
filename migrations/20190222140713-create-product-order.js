@@ -12,6 +12,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
+      product_name: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       order_id: {
         type: Sequelize.INTEGER,
         allowNull: false
