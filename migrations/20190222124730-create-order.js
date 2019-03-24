@@ -12,6 +12,14 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
+      user_name: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      user_phone: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       delivery_address: {
         type: Sequelize.TEXT,
         allowNull: false

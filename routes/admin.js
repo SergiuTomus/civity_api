@@ -9,7 +9,8 @@ const ordersController = require('../controllers/admin/ordersController');
 router.post('/login', restaurantUserController.loginUser);
 router.get('/user', passport.authenticate('jwt', { session: false }), restaurantUserController.getRestaurantUser);
 
-router.get('/new-orders/:restaurantId', ordersController.getNewOrders);
+router.get('/new-orders/:restaurantId', ordersController.getNewOrders); // createOrders
+router.get('/orders', ordersController.createOrders);
 
 router.get('/products', productsController.getAllProducts);
 router.post('/products', productsController.createProduct);

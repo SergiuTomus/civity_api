@@ -4,15 +4,19 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('orders', [{
       user_id: 1,
+      user_name: 'Sergiu Tomus',
+      user_phone: '0728649258',
       delivery_address: "str. Republicii, nr. 17",
       restaurant_id: 1,
       restaurant_user_id: 3,
-      status: 'preluata',
+      status: 'in asteptare',
       total_price: 17.00,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       user_id: 1,
+      user_name: 'Sergiu Tomus',
+      user_phone: '0728649258',
       delivery_address: "str. Republicii, nr. 17",
       restaurant_id: 1,
       restaurant_user_id: 1,
@@ -22,8 +26,10 @@ module.exports = {
       updatedAt: new Date()
     }, {
       user_id: 1,
+      user_name: 'Sergiu Tomus',
+      user_phone: '0728649258',
       delivery_address: "str. Republicii, nr. 17",
-      restaurant_id: 2,
+      restaurant_id: 1,
       restaurant_user_id: 3,
       status: 'livrata',
       total_price: 21.00,
@@ -31,26 +37,32 @@ module.exports = {
       updatedAt: new Date()
     }, {
       user_id: 1,
+      user_name: 'Sergiu Tomus',
+      user_phone: '0728649258',
       delivery_address: "str. Altman, nr. 26",
-      restaurant_id: 2,
+      restaurant_id: 1,
       restaurant_user_id: 1,
-      status: 'livrata',
+      status: 'in asteptare',
       total_price: 28.00,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       user_id: 1,
+      user_name: 'Sergiu Tomus',
+      user_phone: '0728649258',
       delivery_address: "str. Altman, nr. 26",
-      restaurant_id: 4,
+      restaurant_id: 2,
       restaurant_user_id: 2,
-      status: 'preluata',
+      status: 'in asteptare',
       total_price: 32.00,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       user_id: 2,
+      user_name: 'Ana Bogdan',
+      user_phone: '0728649258',
       delivery_address: "str. Baladei, nr. 53",
-      restaurant_id: 5,
+      restaurant_id: 2,
       restaurant_user_id: null,
       status: 'in asteptare',
       total_price: 29.20,
@@ -58,17 +70,21 @@ module.exports = {
       updatedAt: new Date()
     }, {
       user_id: 2,
+      user_name: 'Ana Bogdan',
+      user_phone: '0728649258',
       delivery_address: "str. Baladei, nr. 53",
-      restaurant_id: 5,
+      restaurant_id: 2,
       restaurant_user_id: 2,
-      status: 'respinsa',
+      status: 'anulata',
       total_price: 51.40,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       user_id: 3,
+      user_name: 'Sebastian Dobrincu',
+      user_phone: '0728649258',
       delivery_address: "str. Menker, nr. 35",
-      restaurant_id: 3,
+      restaurant_id: 2,
       restaurant_user_id: null,
       status: 'in asteptare',
       total_price: 70.50,
