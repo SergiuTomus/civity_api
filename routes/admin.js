@@ -9,8 +9,10 @@ const ordersController = require('../controllers/admin/ordersController');
 router.post('/login', restaurantUserController.loginUser);
 router.get('/user', passport.authenticate('jwt', { session: false }), restaurantUserController.getRestaurantUser);
 
-router.get('/new-orders/:restaurantId', ordersController.getNewOrders); // createOrders
-router.get('/orders', ordersController.createOrders);
+router.get('/new-orders/:restaurantId', passport.authenticate('jwt', { session: false }), ordersController.getNewOrders);
+router.patch('/orders/:orderId', passport.authenticate('jwt', { session: false }), ordersController.updateOrder);
+
+router.get('/orders', ordersController.createOrders); // exemplu pt foreignkeys
 
 router.get('/products', productsController.getAllProducts);
 router.post('/products', productsController.createProduct);
