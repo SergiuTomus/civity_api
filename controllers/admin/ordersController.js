@@ -53,19 +53,58 @@ exports.updateOrder = (req, res, next) => {
     });
 };
 
+// @route   GET admin/received-orders/:restaurantId
+// @detail  Return received orders
+// @access  Private
+exports.getReceivedOrders = (req, res, next) => {
+  Order.findAll({
+    attributes: { exclude: ['restaurant_user_id', 'createdAt', 'updatedAt'] },
+    include: [{
+      model: Product_Order,
+      attributes: { exclude: ['createdAt', 'updatedAt'] },
+      // required: true
+    }],
+    where: {
+      restaurant_id: req.params.restaurantId,
+      status: "preluata"
+    }
+  })
+    .then(orders => {
+      res.status(200).json({
+        received_orders: orders
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: err });
+    });
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
+// @route   GET admin/all-orders/:restaurantId
+// @detail  Return all orders
+// @access  Private
+exports.getAllOrders = (req, res, next) => {
+  Order.findAll({
+    attributes: { exclude: ['restaurant_user_id', 'createdAt', 'updatedAt'] },
+    include: [{
+      model: Product_Order,
+      attributes: { exclude: ['createdAt', 'updatedAt'] },
+      // required: true
+    }],
+    where: {
+      restaurant_id: req.params.restaurantId
+    }
+  })
+    .then(orders => {
+      res.status(200).json({
+        all_orders: orders
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: err });
+    });
+};
 
 
 

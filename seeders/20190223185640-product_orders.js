@@ -37,7 +37,7 @@ module.exports = {
     }, {
       product_id: 5,
       product_name: "Pizza Chorizo",
-      order_id: 4,
+      order_id: 2,
       quantity: 1,
       single_price: 24.00,
       createdAt: new Date(),
@@ -45,7 +45,7 @@ module.exports = {
     }, {
       product_id: 6,
       product_name: "Spaghete Carbonara",
-      order_id: 4,
+      order_id: 2,
       quantity: 1,
       single_price: 16.9,
       createdAt: new Date(),
@@ -53,7 +53,7 @@ module.exports = {
     }, {
       product_id: 7,
       product_name: "Pizza Safari",
-      order_id: 5,
+      order_id: 3,
       quantity: 1,
       single_price: 12.9,
       createdAt: new Date(),
@@ -61,7 +61,7 @@ module.exports = {
     }, {
       product_id: 8,
       product_name: "Cheesecake",
-      order_id: 5,
+      order_id: 3,
       quantity: 2,
       single_price: 8.0,
       createdAt: new Date(),

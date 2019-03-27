@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('restaurants', [{
-      name: 'Spartan',
+      name: 'Alloro',
       address: 'bld. Revolutiei, nr. 71',
       phone: '02582256',
       minimum_order: 50,
@@ -14,7 +14,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: 'Saratoga',
+      name: 'Spartan',
       address: 'str. Aviatiei, nr. 45',
       phone: '02582256',
       minimum_order: 60,
@@ -36,7 +36,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: 'Alloro',
+      name: 'Saratoga',
       address: 'str. Iazului, nr. 55',
       phone: '02582256',
       minimum_order: 70,

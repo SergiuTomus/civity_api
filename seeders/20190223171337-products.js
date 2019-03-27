@@ -47,7 +47,7 @@ module.exports = {
     }, {
       restaurant_id: 2,
       name: 'Pizza Safari',
-      price: 12.9,
+      price: 13,
       category_id: 7,
       createdAt: new Date(),
       updatedAt: new Date()

@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('restaurant_users', [{
-      restaurant_id: 1,
+      restaurant_id: 2,
       name: 'Stefan Mandachi',
       phone: '0728649258',
       email: 'stefan.mandachi@yahoo.com',
@@ -12,7 +12,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      restaurant_id: 2,
+      restaurant_id: 1,
       name: 'Amalia Romcea',
       phone: '0728649258',
       email: 'amalia.romcea@gmail.com',
@@ -21,7 +21,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      restaurant_id: 2,
+      restaurant_id: 1,
       name: 'Sergiu Tomus',
       phone: '0728649258',
       email: 'sergiutomus@yahoo.com',

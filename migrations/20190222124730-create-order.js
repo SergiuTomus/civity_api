@@ -28,8 +28,8 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      restaurant_user_id: {
-        type: Sequelize.INTEGER,
+      restaurant_user: {
+        type: Sequelize.STRING,
         allowNull: true
       },
       status: {

@@ -10,6 +10,8 @@ router.post('/login', restaurantUserController.loginUser);
 router.get('/user', passport.authenticate('jwt', { session: false }), restaurantUserController.getRestaurantUser);
 
 router.get('/new-orders/:restaurantId', passport.authenticate('jwt', { session: false }), ordersController.getNewOrders);
+router.get('/received-orders/:restaurantId', passport.authenticate('jwt', { session: false }), ordersController.getReceivedOrders);
+router.get('/all-orders/:restaurantId', passport.authenticate('jwt', { session: false }), ordersController.getAllOrders);
 router.patch('/orders/:orderId', passport.authenticate('jwt', { session: false }), ordersController.updateOrder);
 
 router.get('/orders', ordersController.createOrders); // exemplu pt foreignkeys

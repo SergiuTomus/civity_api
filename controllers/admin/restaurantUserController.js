@@ -29,7 +29,7 @@ exports.loginUser = (req, res, next) => {
           });
         }
         if (result) {   // result == true || false
-          const payload = { id: user.id, name: user.name, email: user.email };
+          const payload = { id: user.id, name: user.name, email: user.email, restaurant_id: user.restaurant_id };
 
           jwt.sign(
             payload,
