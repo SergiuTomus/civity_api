@@ -9,6 +9,7 @@ const clientRoutes = require("./routes/client");
 const adminRoutes = require("./routes/admin");
 
 app.use(morgan("dev"));
+app.use('/img', express.static('img'));  // middleware that makes the 'img' folder publicly available
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

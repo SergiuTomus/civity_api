@@ -7,7 +7,7 @@ const Product_Order = require('../../models').Product_Order;
 exports.getNewOrders = (req, res, next) => {
   Order.findAll({
     // req.user.id,     // from passport middleware
-    attributes: { exclude: ['restaurant_user_id', 'createdAt', 'updatedAt'] },
+    attributes: { exclude: ['restaurant_user_id', 'updatedAt'] },
     include: [{
       model: Product_Order,
       attributes: { exclude: ['createdAt', 'updatedAt'] },
