@@ -9,8 +9,9 @@ module.exports = (sequelize, DataTypes) => {
     image_url: DataTypes.STRING,
     category_id: DataTypes.INTEGER
   }, {});
-  Product.associate = function(models) {
+  Product.associate = function (models) {
     // associations can be defined here
+    Product.belongsTo(models.Category, { foreignKey: 'category_id' });
   };
   return Product;
 };

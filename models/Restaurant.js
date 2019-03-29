@@ -12,8 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     saturday_program: DataTypes.STRING,
     sunday_program: DataTypes.STRING
   }, {});
-  Restaurant.associate = function(models) {
+  Restaurant.associate = function (models) {
     // associations can be defined here
+    Restaurant.hasMany(models.Category, { foreignKey: 'restaurant_id' });
   };
   return Restaurant;
 };
