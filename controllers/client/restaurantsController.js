@@ -81,12 +81,12 @@ exports.getProducts = (req, res, next) => {
       attributes: { exclude: ['createdAt', 'updatedAt'] }
     }],
     where: {
-      restaurant_id: req.params.categoryId
+      id: req.params.categoryId
     }
   })
     .then(products => {
       res.status(200).json({
-        categories: products
+        category: products
       });
     })
     .catch(err => {

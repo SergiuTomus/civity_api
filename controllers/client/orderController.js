@@ -5,36 +5,36 @@ const Order = require('../../models').Order;
 // @access  Private
 exports.createOrder = (req, res, next) => {
   Order.create({
-    user_id: 3,
-    user_name: 'Sebastian Dobrincu',
-    user_phone: '0728649258',
-    delivery_address: "str. Menker, nr. 35",
-    restaurant_id: 1,
+    user_id: req.body.user_id,  //tr schimbat in req.user.id - from passport middleware
+    user_name: req.body.user_name,
+    user_phone: req.body.user_phone,
+    delivery_address: req.body.delivery_address,
+    restaurant_id: req.body.restaurant_id,
     restaurant_user_id: null,
     status: 'in asteptare',
-    total_price: 60.00,
+    total_price: req.body.total_price,
     createdAt: new Date(),
     updatedAt: new Date()
   })
     .then(order => {
-      order.createProduct_Order({
-        product_id: 1,
-        product_name: "Pizza Quatro Stagioni",
-        quantity: 3,
-        single_price: 20.00,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      }).then(productOrder => {
-        res.status(200).json({
-          order: order,
-          product_order: productOrder
-        });
-      })
-        .catch(err => {
-          console.log(err);
-          res.status(500).json({ error: err });
-        });
-
+      req.body.product_orders.map((product) => {
+        order.createProduct_Order({
+          product_id: product.product_id,
+          product_name: product.product_name,
+          quantity: product.quantity,
+          single_price: product.single_price,
+          order_id: order.id,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        })
+          .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: err });
+          });
+      });
+      res.status(200).json({
+        message: "Comanda a fost trimisa cu succes"
+      });
     })
     .catch(err => {
       console.log(err);
