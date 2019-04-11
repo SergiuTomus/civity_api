@@ -21,7 +21,6 @@ exports.createOrder = (req, res, next) => {
         order.createProduct_Order({
           product_id: product.product_id,
           product_name: product.product_name,
-          quantity: product.quantity,
           single_price: product.single_price,
           order_id: order.id,
           createdAt: new Date(),

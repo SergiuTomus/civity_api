@@ -20,10 +20,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      quantity: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
       single_price: {
         type: Sequelize.DOUBLE,
         allowNull: false
