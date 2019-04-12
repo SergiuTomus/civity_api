@@ -28,7 +28,8 @@ exports.registerUser = (req, res, next) => {
               name: req.body.name,
               email: req.body.email,
               password: hash,
-              phone: req.body.phone
+              phone: req.body.phone,
+              delivery_address: req.body.delivery_address
             })
               .then(result => {
                 res.status(201).json({

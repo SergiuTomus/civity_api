@@ -7,6 +7,7 @@ module.exports = {
       email: 'sergiutomus@yahoo.com',
       password: '$2b$10$CmIXpHCQZPNRlAloCKM1TuD6pt9Bhfum8FRV1N.rjK.NYHT4F8AKi', // 123456
       phone: '0728649258',
+      delivery_address: 'str. Republicii, nr. 17',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -14,6 +15,7 @@ module.exports = {
       email: 'ana.bogdan@gmail.com',
       password: '$2b$10$N8l.YQsurocwJM2zVwHAROj/HS9Da6OItCyYo46XIhTO0NvQXB1b2', // 123456
       phone: '0728649258',
+      delivery_address: 'str. Baladei, nr. 53',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -21,6 +23,7 @@ module.exports = {
       email: 'sebastian.dobrincu@gmail.com',
       password: '$2b$10$ZzQGR3reDntFLFSIAm1P/Ot1wJGzZ20cfyVrEb4Zvl2VM1.CalF8O', // 123456
       phone: '0728649258',
+      delivery_address: 'str. Menker, nr. 35',
       createdAt: new Date(),
       updatedAt: new Date()
     }]);
