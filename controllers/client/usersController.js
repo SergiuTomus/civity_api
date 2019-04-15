@@ -33,7 +33,7 @@ exports.registerUser = (req, res, next) => {
             })
               .then(result => {
                 res.status(201).json({
-                  message: 'Utilizator creat cu succes'
+                  message: 'Contul a fost creat cu succes'
                 })
               })
               .catch(err => {
@@ -78,7 +78,7 @@ exports.loginUser = (req, res, next) => {
           });
         }
         if (result) {   // result == true || false
-          const payload = { id: user.id, name: user.name, email: user.email };
+          const payload = { id: user.id, email: user.email };
 
           jwt.sign(
             payload,
@@ -87,7 +87,8 @@ exports.loginUser = (req, res, next) => {
             (err, token) => {
               return res.status(200).json({
                 message: "Autentificare cu succes",
-                token: 'Bearer ' + token
+                token: 'Bearer ' + token,
+                user: { name: user.name, phone: user.phone, delivery_address: user.delivery_address }
               });
             }
           );

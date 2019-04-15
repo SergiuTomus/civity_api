@@ -5,7 +5,7 @@ const Order = require('../../models').Order;
 // @access  Private
 exports.createOrder = (req, res, next) => {
   Order.create({
-    user_id: req.body.user_id,  //tr schimbat in req.user.id - from passport middleware
+    user_id: req.user.id,
     user_name: req.body.user_name,
     user_phone: req.body.user_phone,
     delivery_address: req.body.delivery_address,
