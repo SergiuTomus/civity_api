@@ -16,7 +16,7 @@ router.post('/login', usersController.loginUser);
 
 router.post('/order', passport.authenticate('jwt', { session: false }), orderController.createOrder); // tr autentificare
 
-router.get('/user', passport.authenticate('jwt', { session: false }), usersController.getCurrentUser);
+router.patch('/user/:userId', passport.authenticate('jwt', { session: false }), usersController.updateUser);
 
 
 module.exports = router;

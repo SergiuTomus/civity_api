@@ -103,13 +103,26 @@ exports.loginUser = (req, res, next) => {
     });
 };
 
-// @route   GET client/user
-// @detail  Return current user
+// @route   PATCH client/user/:userId
 // @access  Private
-exports.getCurrentUser = (req, res, next) => {
-  res.status(200).json({
-    id: req.user.id,
-    user_name: req.user.name,
-    email: req.user.email
-  });
+exports.updateUser = (req, res, next) => {
+  User.update(
+    { ...req.body },
+    {
+      where: { id: req.params.userId }
+    }
+  )
+    .then(result => {
+      console.log(result);
+      if (result[0] === 1) {
+        res.status(200).json({ message: "User updated successfully" });
+      }
+      else {
+        res.status(404).json({ message: "User record not found" });
+      }
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: err });
+    });
 }
