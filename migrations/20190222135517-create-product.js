@@ -20,14 +20,6 @@ module.exports = {
         type: Sequelize.DOUBLE,
         allowNull: false,
       },
-      stock: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
-      },
-      description: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-      },
       image_url: {
         type: Sequelize.STRING,
         allowNull: true,
