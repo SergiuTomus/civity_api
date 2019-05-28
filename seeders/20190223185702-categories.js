@@ -3,7 +3,22 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('categories', [{
-      name: "meniu",
+      name: "meniuri",
+      restaurant_id: 1,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }, {
+      name: "pizza",
+      restaurant_id: 1,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }, {
+      name: "paste",
+      restaurant_id: 1,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }, {
+      name: "garnituri",
       restaurant_id: 1,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -13,38 +28,23 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: "desert",
-      restaurant_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      name: "supe",
-      restaurant_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      name: "pizza",
-      restaurant_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      name: "paste",
+      name: "meniuri",
       restaurant_id: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: "pizza",
+      name: "sandwich-uri",
       restaurant_id: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: "desert",
+      name: "preparate",
       restaurant_id: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      name: "paste",
-      restaurant_id: 3,
+      name: "sosuri",
+      restaurant_id: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
