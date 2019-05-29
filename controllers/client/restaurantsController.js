@@ -15,7 +15,7 @@ exports.getAllRestaurants = (req, res, next) => {
   if (day == 7) program = "sunday_program";
 
   Restaurant.findAll({
-    attributes: ['id', 'name', 'description', 'image_url', 'minimum_order', 'cost_delivery', program]
+    attributes: ['id', 'name', 'image_url', 'minimum_order', 'cost_delivery', program]
   })
     .then((rows) => {
       const response = {
@@ -29,7 +29,6 @@ exports.getAllRestaurants = (req, res, next) => {
           return {
             id: row.id,
             restaurant_name: row.name,
-            description: row.description,
             image_url: row.image_url,
             opened: isOpen,
             minimum_order: row.minimum_order,

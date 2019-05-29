@@ -246,7 +246,7 @@ module.exports = {
       restaurant_id: 2,
       name: 'Meniu Souvlaki',
       price: 17.99,
-      image_url: 'img/alloro/souvlaki.png',
+      image_url: 'img/spartan/souvlaki.png',
       category_id: 6,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -254,7 +254,7 @@ module.exports = {
       restaurant_id: 2,
       name: 'Meniu Crispy',
       price: 18.99,
-      image_url: 'img/alloro/meniu_crispi.png',
+      image_url: 'img/spartan/meniu_crispi.png',
       category_id: 6,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -262,7 +262,7 @@ module.exports = {
       restaurant_id: 2,
       name: 'Meniu Snitel',
       price: 17.99,
-      image_url: 'img/alloro/meniu_snitel.png',
+      image_url: 'img/spartan/meniu_snitel.png',
       category_id: 6,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -270,7 +270,7 @@ module.exports = {
       restaurant_id: 2,
       name: 'Platou Persia',
       price: 19.99,
-      image_url: 'img/alloro/platou_persia.png',
+      image_url: 'img/spartan/platou_persia.png',
       category_id: 6,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -278,7 +278,7 @@ module.exports = {
       restaurant_id: 2,
       name: 'Leonidas',
       price: 15.99,
-      image_url: 'img/alloro/leonidas.png',
+      image_url: 'img/spartan/leonidas.png',
       category_id: 7,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -286,7 +286,7 @@ module.exports = {
       restaurant_id: 2,
       name: 'Cheese Gyros',
       price: 17.99,
-      image_url: 'img/alloro/cheese_gyros.png',
+      image_url: 'img/spartan/cheese_gyros.png',
       category_id: 7,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -294,7 +294,7 @@ module.exports = {
       restaurant_id: 2,
       name: 'Burger Gyros',
       price: 13.99,
-      image_url: 'img/alloro/burger-gyros.png',
+      image_url: 'img/spartan/burger-gyros.png',
       category_id: 7,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -302,7 +302,7 @@ module.exports = {
       restaurant_id: 2,
       name: 'Gyros Puisor',
       price: 15.99,
-      image_url: 'img/alloro/gyros.png',
+      image_url: 'img/spartan/gyros.png',
       category_id: 7,
       createdAt: new Date(),
       updatedAt: new Date()
@@ -310,240 +310,64 @@ module.exports = {
       restaurant_id: 2,
       name: 'Snitel Pita',
       price: 14.99,
-      image_url: 'img/alloro/snitel_pita.png',
+      image_url: 'img/spartan/snitel_pita.png',
       category_id: 7,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       restaurant_id: 2,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
+      name: 'Cartofi cu sos branza',
+      price: 11.99,
+      image_url: 'img/spartan/cartofi_cu_sos.png',
       category_id: 8,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       restaurant_id: 2,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
+      name: 'Pizza Ladenia',
+      price: 19.99,
+      image_url: 'img/spartan/pizza_ladenia.png',
       category_id: 8,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       restaurant_id: 2,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
+      name: 'Salata Fresh',
+      price: 13.99,
+      image_url: 'img/spartan/slata_fresh.png',
       category_id: 8,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       restaurant_id: 2,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
+      name: 'Sos dulce acrisor',
+      price: 2.49,
+      image_url: 'img/spartan/dulce_acrisor.png',
       category_id: 9,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       restaurant_id: 2,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
+      name: 'Sos de legume',
+      price: 2.49,
+      image_url: 'img/spartan/sos_legume.png',
       category_id: 9,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       restaurant_id: 2,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
+      name: 'Sos usturoi',
+      price: 2.49,
+      image_url: 'img/spartan/sos_usturoi.png',
       category_id: 9,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       restaurant_id: 2,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
+      name: 'Sos masline',
+      price: 2.49,
+      image_url: 'img/spartan/sos_masline.png',
       category_id: 9,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      restaurant_id: 1,
-      name: '',
-      price: 0.99,
-      image_url: 'img/alloro/.jpg',
-      category_id: 1,
       createdAt: new Date(),
       updatedAt: new Date()
     }]);

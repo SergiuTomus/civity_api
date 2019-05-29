@@ -2,7 +2,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Restaurant = sequelize.define('Restaurant', {
     name: DataTypes.STRING,
-    description: DataTypes.TEXT,
     address: DataTypes.TEXT,
     phone: DataTypes.STRING,
     image_url: DataTypes.STRING,
