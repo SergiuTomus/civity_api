@@ -1,4 +1,6 @@
 const Order = require('../../models').Order;
+const Product_Order = require('../../models').Product_Order;
+const Restaurant = require('../../models').Restaurant;
 
 // @route   POST client/order
 // @detail  send order
@@ -33,6 +35,35 @@ exports.createOrder = (req, res, next) => {
       });
       res.status(200).json({
         message: "Comanda a fost trimisa cu succes"
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: err });
+    });
+};
+
+// @route   GET client/user-orders/:userId
+// @detail  Return all the orders from one user
+// @access  Private
+exports.getUserOrders = (req, res, next) => {
+  Order.findAll({
+    // req.user.id, 
+    attributes: { exclude: ['user_phone', 'delivery_address', 'restaurant_user', 'createdAt', 'updatedAt'] },
+    include: [{
+      model: Restaurant,
+      attributes: ['name'],
+    }, {
+      model: Product_Order,
+      attributes: { exclude: ['createdAt', 'updatedAt'] },
+    }],
+    where: {
+      user_id: req.params.userId,
+    }
+  })
+    .then(orders => {
+      res.status(200).json({
+        user_orders: orders
       });
     })
     .catch(err => {
