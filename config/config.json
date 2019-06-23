@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "anasofia",
-    "database": "meniu_rapid",
-    "host": "127.0.0.1",
+    "username": "PRgzyCTdmP",
+    "password": "Zrg79OrqWQ",
+    "database": "PRgzyCTdmP",
+    "host": "remotemysql.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
@@ -11,14 +11,14 @@
     "username": "root",
     "password": null,
     "database": "database_test",
-    "host": "127.0.0.1",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "PRgzyCTdmP",
+    "password": "Zrg79OrqWQ",
+    "database": "PRgzyCTdmP",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   }
 }
