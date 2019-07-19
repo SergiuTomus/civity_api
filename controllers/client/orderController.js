@@ -65,6 +65,8 @@ exports.getUserOrders = (req, res, next) => {
       res.status(200).json({
         user_orders: orders
       });
+
+      
     })
     .catch(err => {
       console.log(err);
