@@ -8,6 +8,7 @@ const Restaurant = require('../../models').Restaurant;
 exports.createOrder = (req, res, next) => {
   Order.create({
     user_id: req.user.id,
+    user_id: 1,
     user_name: req.body.user_name,
     user_phone: req.body.user_phone,
     delivery_address: req.body.delivery_address,

@@ -14,7 +14,7 @@ router.get('/products/:categoryId', restaurantsController.getProducts);
 router.post('/register', usersController.registerUser);
 router.post('/login', usersController.loginUser);
 
-router.post('/order', passport.authenticate('jwt', { session: false }), orderController.createOrder);
+router.post('/order', orderController.createOrder); // passport.authenticate('jwt', { session: false })
 router.get('/user-orders/:userId', orderController.getUserOrders);
 
 router.patch('/user/:userId', passport.authenticate('jwt', { session: false }), usersController.updateUser);
